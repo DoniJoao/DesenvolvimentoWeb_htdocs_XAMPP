@@ -2,6 +2,9 @@
 //Inclui o arquivo que contem a definição da clasee Turma
 require_once "classes/Turma.php";
 
+//verifica se o usuario tem SESSION de login
+require_once 'usuario-verifica.php';
+
 //Cria um novo objeto Turma
 $turma = new Turma();
 

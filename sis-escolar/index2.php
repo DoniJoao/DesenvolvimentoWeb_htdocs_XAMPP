@@ -8,7 +8,7 @@
   <body>
     <?php 
         //verifica se o usuario tem SESSION de login
-        require_once 'usuario-verifica.php'
+        require_once 'usuario-verifica.php';
     ?>
 
     <h1>Sistema Acadêmico</h1>
@@ -17,6 +17,6 @@
       <li><a href="turmas-listar.php">Turmas</a></li>
       <li><a href="#">Disciplinas</a></li>
     </ul>
-    <a href="#">sair</a>
+    <a href="index.html">sair</a>
   </body>
 </html>

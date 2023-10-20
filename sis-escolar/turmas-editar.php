@@ -2,6 +2,9 @@
     // Inclui o arquivo que contém a definição da classe Turma
     require_once "classes/Turma.php";
 
+    //verifica se o usuario tem SESSION de login
+    require_once 'usuario-verifica.php';
+
     // Obtém o valor do parâmetro "id" passado na URL via método GET
     $id = $_GET['id'];
 
