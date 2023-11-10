@@ -17,46 +17,42 @@ class Turma
         }
 	}
 
-    public function inseir()
+    public function inserir()
     {
-        // echo "Turma: ".$this->descTurma."<br>";
-        // echo "Ano: ".$this->ano."<br><br>";
-        // echo "Registro gravado com sucesso! #sqn";
-
-        //Define a string SQL de inserção de dados na tabela "tb_turmas"
+        // Define a string SQL de inserção de dados na tabela "tb_turmas"
         $sql = "INSERT INTO tb_turmas (descTurma, ano) VALUES (
-                '" . $this->descTurma . "',
-                '" . $this->ano . "'
-            )";
+            '" .$this->descTurma. "' ,
+            '" .$this->ano. " '
+        )";
 
-        //Cria uma nova conexão PDO com o banco de daos "sis-escolar"
-        include "classes/Conexao.php";
+        // Cria uma nova conexão PDO com o banco de dados "sis-escolar"
+        $conexao = new PDO('mysql:host=127.0.0.1;dbname=sis-escolar2','root','');
 
-        //Executa a string SQL na conexão, inserindo os dados na tabela "tb_turmas"
+        // Executa a string SQL na conexão, inserindo os dados na tabela "tb_turmas"
         $conexao->exec($sql);
 
-        echo "Registro gravado com sucesso";
-        //Essa linha retornar para a lista depois de 5 segundos
-        header("refresh:3; URL= turmas-listar.php");
-    }
-    public function listar()
-    {
-        //Define a string SQL para selecionar os registros de tabela
-        $sql = "SELECT * FROM tb_turmas";
-
-        //Cria uma nova conexão PDO com o banco de daos "sis-escolar"
-        include "classes/Conexao.php";
-
-        //Executa a string SQL na conexão, retornando um objeto de resultado
-        $resultado = $conexao->query($sql);
-
-        //Extrai todos os registros do objeto e coloca-os em um array
-        $lista = $resultado->fetchAll();
-
-        //Retorna o array contendo todos os registros da tabela "tb_aluno"
-        return $lista;
+        echo "Registro gravado com sucesso!";
         
     }
+
+    public function listar()
+	{
+        // Define a string SQL para selecionar todos os registros da tabela
+        $sql = "SELECT * FROM tb_turmas";
+
+        // Cria uma nova conexão PDO com o banco de dados "sis-escolar"
+        $conexao = new PDO('mysql:host=127.0.0.1;dbname=sis-escolar2','root','');
+
+        // Executa a string SQL na conexão retornando um objeto de resultado
+        $resultado = $conexao->query($sql);
+
+        // Extrai todos os registros do objeto e os armazena em um array
+        $lista = $resultado->fetchAll();
+
+        // Retorna o array contendo todos os registros da tabela "tb_turmas"
+        return $lista;
+	}
+
     public function excluir()
 	{
         // Define a string de consulta SQL para deletar um registro
@@ -65,7 +61,7 @@ class Turma
 
         // Cria uma nova conexão PDO com o banco de dados "sis-escolar" localizado
         // no servidor "127.0.0.1" e autentica com o usuário "root" (sem senha)
-        include "classes/Conexao.php";
+        $conexao = new PDO('mysql:host=127.0.0.1;dbname=sis-escolar2','root','');
 
         // Executa a instrução SQL de exclusão utilizando o método
         // "exec" do objeto de conexão PDO criado acima
@@ -76,7 +72,7 @@ class Turma
     {
         // Query SQL para buscar uma turma no banco de dados pelo id
         $sql = "SELECT * FROM tb_turmas WHERE id=" . $this->id;
-        include "classes/Conexao.php";
+        $conexao = new PDO('mysql:host=127.0.0.1;dbname=sis-escolar2', 'root', '');
 
         // Execução da query e armazenamento do resultado em uma variável
         $resultado = $conexao->query($sql);
@@ -96,7 +92,8 @@ class Turma
                     ano = '$this->ano'                   
                 WHERE id = $this->id ";
 
-        include "classes/Conexao.php";
+        $conexao = new PDO('mysql:host=127.0.0.1;dbname=sis-escolar2', 'root', '');
         $conexao->exec($sql);
     }
+
 }

@@ -1,18 +1,15 @@
 <?php
-//Inclui o arquivo que contem a definição da clasee Turma
+// Inclui o arquivo que contém a definição da classe Turma
 require_once "classes/Turma.php";
 
-//verifica se o usuario tem SESSION de login
-require_once 'usuario-verifica.php';
-
-//Cria um novo objeto Turma
+// Cria um novo objeto Turma
 $turma = new Turma();
 
-/** Define as propriedades descTurma e ano no objeto Turma
- * com os valores enc=viados pelo formulário */
+// Define as propriedades descTurma e ano do objeto Turma com os valores enviados pelo formulário
 $turma->descTurma = $_POST['descTurma'];
 $turma->ano = $_POST['ano'];
 
-/**Chama o método inserir() no objeto Turma para inserir
- * os dados na nova turma no banco dados */
-$turma->inseir();
+// Chama o método inserir() no objeto Turma para inserir os dados da nova turma no banco de dados
+$turma->inserir();
+
+?>

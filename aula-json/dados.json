@@ -1,0 +1,72 @@
+[
+  {
+    "nome": "Vinicius",
+    "turma": "1ºDSM",
+    "disciplinas": [
+      {
+        "nome": "Lógica de Programação",
+        "professor": "Júnior"
+      },
+      {
+        "nome": "Desenvolvimento Web I",
+        "professor": "Thiago"
+      }
+    ]
+  },
+  {
+    "nome": "Mônica",
+    "turma": "2ºDSM",
+    "disciplinas": [
+      {
+        "nome": "Desenvolvimento Web II",
+        "professor": "Júnior"
+      },
+      {
+        "nome": "Engenharia de Software",
+        "professor": "Ana Célia"
+      }
+    ]
+  },
+  {
+    "nome": "Pedro",
+    "turma": "3ºDSM",
+    "disciplinas": [
+      {
+        "nome": "Desenvolvimento Web III",
+        "professor": "Júnior"
+      },
+      {
+        "nome": "Engenharia de Software II",
+        "professor": "Ana Célia"
+      }
+    ]
+  },
+  {
+    "nome": "Josefina",
+    "turma": "4ºDSM",
+    "disciplinas": [
+      {
+        "nome": "Desenvolvimento Web IV",
+        "professor": "Júnior"
+      },
+      {
+        "nome": "Engenharia de Software III",
+        "professor": "Ana Célia"
+      }
+    ]
+  },
+  {
+    "nome": "Florisvaldo",
+    "turma": "5ºDSM",
+    "disciplinas": [
+      {
+        "nome": "Técnicas de Implementação",
+        "professor": "Clarencio"
+      },
+      {
+        "nome": "Engenharia de Dados",
+        "professor": "Rosendo Nunes"
+      }
+    ]
+  }
+]

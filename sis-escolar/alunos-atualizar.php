@@ -1,12 +1,12 @@
 <?php
     // Inclui o arquivo que contém a definição da classe Turma
-    require_once "classes/Turma.php";
+    require_once "classes/Aluno.php";
 
     // Obtém o valor do parâmetro "id" passado na URL via método GET
     $id = $_GET['id'];
 
     // Cria um novo objeto da classe Turma passando o valor de $id como parâmetro
-    $turma = new Turma($id);
+    $aluno = new Aluno($id);
 ?>
 
 <!DOCTYPE html>
@@ -17,8 +17,8 @@
 </head>
 <body>
     <h1>Sistema Acadêmico</h1>
-    <h3>Editar Turma</h3>
-    <form action="turmas-editar-gravar.php" method="POST">
+    <h3>Nova Turma</h3>
+    <form action="alunos-atualizar-gravar.php" method="POST">
         <input type="hidden" name="id" value="<?= $turma->id ?>">
         <label for="descTurma">Turma:</label>
         <input type="text" name="descTurma" value="<?= $turma->descTurma ?>">

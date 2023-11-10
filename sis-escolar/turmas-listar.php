@@ -18,12 +18,6 @@
     <title>Sistema Acadêmico</title>
 </head>
 <body>
-
-    <?php 
-    //verifica se o usuario tem SESSION de login
-    require_once 'usuario-verifica.php';
-    ?>
-
     <h1>Sistema Acadêmico</h1>
     <h3>Listar Turmas</h3>
     <table border="1">
@@ -45,7 +39,8 @@
         </tr>
         <?php endforeach ?>
     </table>
-    <br><br>
-    <a href="turmas-inserir.html">Nova Turma</a>
+    <a href="turmas-inserir.html">Adicionar Turma</a>
+    <br>
+    <a href="index2.php">Voltar a pagina inicial</a>
 </body>
 </html>
