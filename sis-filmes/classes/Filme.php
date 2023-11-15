@@ -26,7 +26,7 @@ class Filme
     {
         $sql = "SELECT * FROM filme
         WHERE id=" . $this->id;
-        include "Classes/Filme.php";
+        include "classes/Filme.php";
 
         $resultado = $conexao->query($sql);
         $linha = $resultado->fetch();
@@ -56,11 +56,12 @@ class Filme
             '{$this->ano_lancamento}',
             '{$this->duracao}',
             '{$this->nota_imdb}',
-            '{$this->img_cartaz}',
+            '{$this->nomeCartaz}',
             '{$this->fk_diretor_id}',
             )";
-        include_once"classes/Conexao.php";
+        $conexao = new PDO('mysql:host=127.0.0.1;dbname=sis_filmes','root','');
         $conexao->exec($sql);
+
         echo "Filme Registrado com Sucesso";
     }
 
@@ -71,7 +72,7 @@ class Filme
             ON a.fk_diretor_id = t.id
             ORDER BY a.id";
             
-        include_once "Classes/Conexao.php";
+        include_once "classes/Conexao.php";
         $resultado = $conexao->query($sql);
         $lista = $resultado->fetchAll();
         return $lista;
@@ -95,7 +96,7 @@ class Filme
              img_cartaz= '{$this->img_cartaz}'
              fk_diretor_id= '{$this->fk_diretor_id}'
         WHERE id = $this->id";
-    include_once "Classes/Conexao.php";
+    include_once "classes/Conexao.php";
     $conexao->exec($sql);
     echo"Registro atualizado!";
     }

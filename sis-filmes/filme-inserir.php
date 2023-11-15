@@ -1,5 +1,5 @@
 <?php 
-    require_once "classe/Filme.php";
+    require_once "classes/Filme.php";
     $filme = new Filme();
     $lista = $filme->listar();
 ?>
@@ -25,10 +25,10 @@
         <input type="number" name="ano_lancamento" id="">
         <br>
         <label for="duracao">Duração:</label>
-        <input type="number" name="duracao" id="">
+        <input type="text" name="duracao" id="">
         <br>
         <label for="nota_imdb">Nota IMDB:</label>
-        <input type="number" name="nota_imdb" id="">
+        <input type="text" name="nota_imdb" id="">
         <br>
         <label for="img_cartaz">Cartaz:</label>
         <input type="file" name="img_cartaz" id="">

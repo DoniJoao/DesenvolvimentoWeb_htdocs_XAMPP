@@ -14,7 +14,7 @@
     <h1>Sistema Filmes</h1>
     <h2>Seus Filmes</h2>
     <br>
-    <a href="filme-listar.php">Novo Filme</a>
+    <a href="filme-inserir.php">Novo Filme</a>
     <table border="1">
         <tr>
             <th>Titulo</th>
