@@ -1,10 +1,12 @@
 <?php 
     $usuario = $_POST["usuario"];
 
-    $sql = "SELECT * FROM usuarios WHERE
-    usuario='{$usuario}'";
+    $sql = "SELECT * FROM usuario 
+            WHERE usuario ='{$usuario}'";
 
-$conexao = new PDO('mysql:host=127.0.0.1;dbname=sis_filmes', 'root', '');
+include "classes/Conexao.php";
+
+$conexao = Conexao::Connection();
 $resultado = $conexao->query($sql);
 $linha = $resultado->fetch();
 $usuario_logado = $linha['usuario'];

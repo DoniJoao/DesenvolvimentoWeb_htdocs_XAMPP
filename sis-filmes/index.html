@@ -3,14 +3,51 @@
   <head>
     <meta charset="UTF-8" />
     <title>Sistema Filmes</title>
+
+    <link
+      rel="canonical"
+      href="https://getbootstrap.com/docs/5.3/examples/headers/"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@docsearch/css@3"
+    />
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <script src="js/color-modes.js"></script>
+
+    <style>
+      body {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #f8f9fa;
+      }
+
+      .login-container {
+        max-width: 400px;
+        width: 100%;
+        padding: 15px;
+        background-color: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .login-title {
+        text-align: center;
+        font-size: 24px;
+        margin-bottom: 20px;
+      }
+    </style>
   </head>
-  <body>
+  <body class="login-container">
     <h1>Sistema Filmes</h1>
+    <p>seja Bem-Vindo !</p>
     <form action="usuario-login.php" method="POST">
-      <h3>Bem-vindo!</h3>
-      <input type="text" name="usuario" />
-      <br><br>
-      <input type="submit" value="Logar" />
+      <div class="mb-3">
+        <input type="text" name="usuario" />
+      </div>
+      <button type="submit" class="btn btn-primary btn-block">Logar</button>
     </form>
   </body>
 </html>

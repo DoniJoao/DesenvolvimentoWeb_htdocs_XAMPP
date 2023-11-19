@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>TopFilmes</title>
+  </head>
+  <body>
+    <h1>Cadastrar filme</h1>
+    <form
+      action="cadastrar-filme.php"
+      method="POST"
+      enctype="multipart/form-data"
+    >
+      <label for="titulo">Titulo</label>
+      <br />
+      <input
+        id="titulo"
+        type="text"
+        name="titulo"
+        placeholder="Digite o titulo do filme"
+      />
+      <br /><br />
+      <label for="titulo">Sinopse</label>
+      <br />
+      <input
+        id="sinopse"
+        type="text"
+        name="sinopse"
+        placeholder="Digite o sinopse do filme"
+      />
+      <br /><br />
+      <label for="titulo">Ano Lançamento</label>
+      <br />
+      <input
+        id="ano_lancamento"
+        type="datetime"
+        name="ano_lancamento"
+        placeholder="Digite o ano de lançamento do filme"
+      />
+      <br /><br />
+      <label for="titulo">Duração</label>
+      <br />
+      <input
+        id="duracao"
+        type="number"
+        name="duracao"
+        placeholder="Digite a duração do filme"
+      />
+      <br /><br />
+      <label for="titulo">Nota IMDB</label>
+      <br />
+      <input
+        id="nota_imdb"
+        type="number"
+        name="nota_imdb"
+        step="0.1"
+        placeholder="Digite a nota IMDB do filme"
+      />
+      <br /><br />
+      <label for="titulo">Imagem</label>
+      <br />
+      <input id="img_cartaz" type="file" name="img_cartaz" />
+      <br /><br />
+      <label for="titulo">Nome do diretor</label>
+      <br />
+      <input
+        id="nome_diretor"
+        type="text"
+        name="nome_diretor"
+        placeholder="Digite o nome do diretor"
+      /><br /><br />
+      <label for="titulo">Minibio do diretor</label>
+      <br />
+      <input
+        id="minibio_diretor"
+        type="text"
+        name="minibio_diretor"
+        placeholder="Digite a minibio do diretor"
+      />
+      <br /><br />
+      <label for="titulo">Ano de nascimento do diretor</label>
+      <br />
+      <input
+        id="ano_nascimento_diretor"
+        type="datetime"
+        name="ano_nascimento_diretor"
+        placeholder="Digite o ano de nascimento do diretor"
+      />
+      <br /><br />
+      <input type="submit" value="Cadastrar" />
+    </form>
+  </body>
+</html>
